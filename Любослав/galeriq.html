@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Галерия</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' />
+    <style type="text/css">
+        body {
+            background-image: url(img/fon.jpg);
+            margin: 0;
+            padding: 0;
+            font-family: "Times New Roman", Times, serif;
+        }
+
+        #wrapper {
+            background-color: #1a252f;
+            width: 960px;
+            height: auto;
+            margin: 0 auto;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        #header {
+            background-color: #2c3e50;
+            width: 100%;
+            height: auto;
+            padding: 20px;
+            box-sizing: border-box;
+            color: #ecf0f1;
+            text-align: center;
+        }
+
+            #header table {
+                width: 100%;
+                border: 0;
+                margin: 0 auto;
+                border-collapse: collapse;
+            }
+
+            #header th {
+                padding: 10px;
+                vertical-align: middle;
+            }
+
+            #header .logo-th {
+                width: 39%;
+            }
+
+            #header .text-th {
+                width: 61%;
+            }
+
+        .image-container {
+            border-radius: 25%;
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        .rounded-image {
+            width: 200px;
+            height: 200px;
+        }
+
+        #menu {
+            background-color: #34495e;
+            width: 200px;
+            float: left;
+            height: 100%;
+            padding-top: 20px;
+        }
+
+        ul.menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+            ul.menu li a {
+                display: block;
+                color: #ecf0f1;
+                text-align: center;
+                padding: 15px;
+                text-decoration: none;
+                transition: background-color 0.3s;
+            }
+
+                ul.menu li a:hover {
+                    background-color: #e74c3c;
+                }
+
+        #main {
+            background-color: #ecf0f1;
+            width: 760px;
+            float: left;
+            padding: 20px;
+            box-sizing: border-box;
+            min-height: 500px;
+            text-align: center;
+        }
+
+        #footer {
+            background-color: #2c3e50;
+            clear: both;
+            padding: 10px;
+            text-align: center;
+            color: #ecf0f1;
+        }
+
+        ul.socialIcons {
+            padding: 0;
+            text-align: center;
+        }
+
+        .socialIcons li {
+            list-style: none;
+            display: inline-block;
+            margin: 5px;
+            border-radius: 2em;
+            overflow: hidden;
+        }
+
+            .socialIcons li a {
+                display: block;
+                padding: 0.5em;
+                min-width: 1.5em;
+                height: 1.5em;
+                line-height: 1.5em;
+                transition: 0.5s;
+                text-decoration: none;
+                color: #fff;
+            }
+
+            .socialIcons li:hover a {
+                max-width: 200px;
+                padding-right: 1em;
+            }
+
+        .socialIcons .facebook {
+            background-color: #3b5998;
+            box-shadow: 0 0 10px #3b5998;
+        }
+
+        .socialIcons .twitter {
+            background-color: #00aced;
+            box-shadow: 0 0 10px #00aced;
+        }
+
+        .socialIcons .instagram {
+            background-color: #cd486b;
+            box-shadow: 0 0 10px #cd486b;
+        }
+
+        .socialIcons .linkedin {
+            background-color: #0077b5;
+            box-shadow: 0 0 10px #0077b5;
+        }
+
+        .style1 {
+            font-size: 28px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .style2 {
+            font-size: 20px;
+            color: #e74c3c;
+            margin: 0;
+        }
+
+        .style5 {
+            color: #000000;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+            .gallery-item img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+                display: block;
+            }
+
+            .gallery-item:hover {
+                transform: scale(1.05);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            }
+
+            .gallery-item:active {
+                transform: scale(0.95);
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <p><a name="top" id="top"></a></p>
+        <div id="header">
+            <table>
+                <tr>
+                    <th class="logo-th" scope="col">
+                        <div class="image-container">
+                            <img src="img/logo.png" alt="Защитник ООД Logo" class="rounded-image" />
+                        </div>
+                    </th>
+                    <th class="text-th" scope="col">
+                        <p class="style1">"Защитник" ООД</p>
+                        <p class="style2">Вашият щит в дигиталния свят!</p>
+                    </th>
+                </tr>
+            </table>
+        </div>
+        <aside>
+            <div id="menu">
+                <ul class="menu">
+                    <li><a href="index.html">НАЧАЛО</a></li>
+                    <li><a href="za nas.html">ЗА ФИРМАТА</a></li>
+                    <li><a href="katalog.html">КАТАЛОГ</a></li>
+                    <li><a href="kontakti.html">КОНТАКТИ</a></li>
+                    <li><a href="promociq.html">ПРОМОЦИЯ</a></li>
+                    <li><a href="galeriq.html">ГАЛЕРИЯ</a></li>
+                    <li><a href="avtor.html">АВТОР</a></li>
+                </ul>
+            </div>
+        </aside>
+        <section>
+            <div id="main">
+                <h2>Нашата галерия</h2>
+                <div class="gallery">
+                    <div class="gallery-item"><img src="img/1.jpg" alt="Изображение 1" /></div>
+                    <div class="gallery-item"><img src="img/2.jpg" alt="Изображение 2" /></div>
+                    <div class="gallery-item"><img src="img/3.jpg" alt="Изображение 3" /></div>
+                    <div class="gallery-item"><img src="img/4.jpg" alt="Изображение 4" /></div>
+                    <div class="gallery-item"><img src="img/5.jpg" alt="Изображение 5" /></div>
+                    <div class="gallery-item"><img src="img/6.jpg" alt="Изображение 6" /></div>
+                    <div class="gallery-item"><img src="img/7.jpg" alt="Изображение 7" /></div>
+                    <div class="gallery-item"><img src="img/8.jpg" alt="Изображение 8" /></div>
+                    <div class="gallery-item"><img src="img/9.jpg" alt="Изображение 9" /></div>
+                    <div class="gallery-item"><img src="img/10.jpg" alt="Изображение 10" /></div>
+                    <div class="gallery-item"><img src="img/11.jpg" alt="Изображение 11" /></div>
+                    <div class="gallery-item"><img src="img/12.jpg" alt="Изображение 12" /></div>
+                    <div class="gallery-item"><img src="img/13.jpg" alt="Изображение 13" /></div>
+                    <div class="gallery-item"><img src="img/14.jpg" alt="Изображение 14" /></div>
+                    <div class="gallery-item"><img src="img/15.jpg" alt="Изображение 15" /></div>
+                </div>
+                <p><a href="#top" class="style5">Към началото</a></p>
+            </div>
+        </section>
+        <div id="footer">
+            <ul class="socialIcons">
+                <li class="facebook"><a href="https://www.facebook.com/"><i class="fa fa-fw fa-facebook"></i>Facebook</a></li>
+                <li class="twitter"><a href="https://twitter.com/"><i class="fa fa-fw fa-twitter"></i>Twitter</a></li>
+                <li class="instagram"><a href="https://www.instagram.com/"><i class="fa fa-fw fa-instagram"></i>Instagram</a></li>
+                <li class="linkedin"><a href="https://www.linkedin.com/"><i class="fa fa-fw fa-linkedin"></i>LinkedIn</a></li>
+            </ul>
+            <p>
+                Автор: Любослав Личков<br />
+                <!-- #BeginDate format:fcEn2a -->Thursday, 13-Mar-2025 7:53 PM<!-- #EndDate --><br />
+                ©Всички права запазени
+            </p>
+        </div>
+    </div>
+</body>
+</html>
